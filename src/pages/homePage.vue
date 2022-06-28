@@ -7,9 +7,9 @@
         ></todoInput>
         <todoList        
         @modalConfirm="removeTodo"
-        @checkedItem= "checked = $event;"
-        @checkShow= "showCheck = !showCheck; checked = $event;"
-        @toFixItem= "toFix = !toFix; checked = $event;"
+        @checkedItem="checked = $event;"
+        @checkShow="showCheck = !showCheck; checked = $event;"
+        @toFixItem="toFix = !toFix; checked = $event;"
         @changeItem="changeItem"
         :propsdata="todoItems" :showCheck="showCheck" :checked="checked" :toFix="toFix"
         ></todoList>
@@ -60,24 +60,16 @@ export default {
         },
         //수정하기
         changeItem(todoItem, index){
-            
-
-            let lastIndex = this.todoItems.length - 1;
-            console.log(lastIndex);
-            this.tempArr = this.todoItems.splice(this.checked, (this.todoItems.length - this.checked), todoItem[0].id);
-            console.log(this.tempArr);
-            if(this.checked !== lastIndex){
-                let tempArr2 = this.tempArr.splice(1, this.tempArr.length -1);
-                this.tempArr = this.todoItems.concat(tempArr2);
-                this.todoItems = this.tempArr;  
-            }
-            let getData = JSON.parse(localStorage.getItem(index+1));
-            console.log(getData[0].id);
-            getData[0].id = todoItem;
-            localStorage.removeItem(getData[0].id);
-            localStorage.setItem(todoItem[0].id, JSON.stringify(todoItem));
-            
-
+            //1. 해당 인덱스의 로컬스토리지 데이터 값을 파싱해서 불러오기                               
+            let getItem = JSON.parse(localStorage.getItem(index));                       
+            //2. 불러온 로컬스토리지 데이터를 수정하기에서 가져온 todoItem으로 치환.
+            getItem = todoItem;            
+            //3. 원래있던 로컬 인덱스 제거
+            localStorage.removeItem(index);
+            //4. 치환된 데이터를 새로 입력
+            localStorage.setItem(getItem[0].id, JSON.stringify(getItem));
+            //5. todoItems 배열의 현재 인덱스 값을 새로바꾸는 값으로 치환.
+            this.todoItems[index] = getItem[0].id;        
         }
     }
     

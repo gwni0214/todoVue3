@@ -1,24 +1,15 @@
-# vue33
+# Vue Todo List 만들기
+    구현해야 할 기능
+    1. todo 입력
+        a. 토스트 팝업 구현
 
-## Project setup
-```
-npm install
-```
+    2. todo 삭제하기
+        a. 삭제에 대한 확인 Modal 구현
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+    3. todo 수정하기
+        a. 로컬스토리지 JSON 활용
 
-### Compiles and minifies for production
-```
-npm run build
-```
+    4. 리스트 체크하기 기능
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# V 1.0.0
+    리스트 다중체크 되는 기능 필요함.

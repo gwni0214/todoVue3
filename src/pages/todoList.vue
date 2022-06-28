@@ -2,7 +2,7 @@
     <div class="list-wrap">        
         <transition-group name="list" tag="ul">
             <li v-for="(todoItem, index) in propsdata" :key="index">
-                <!-- 체크버튼 -->
+                <!-- 체크 -->
                 <span class="list__check-field">
                     <i class="icon-checkmark"
                     v-show="showCheck && checked === index"
@@ -146,6 +146,10 @@ export default {
                 &__fix {
                     cursor: pointer;
                 }
+            }
+            input {
+                border-style: none;
+                font-size: 1rem;
             }
         }
     }
