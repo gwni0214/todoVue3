@@ -128,6 +128,9 @@ export default {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            .list__check-field {
+                width: 5%;
+            }
             .list__text-field {
                 width: 50%;
                 white-space: nowrap;
@@ -150,6 +153,83 @@ export default {
             input {
                 border-style: none;
                 font-size: 1rem;
+            }
+        }
+    }
+    //미디어쿼리
+    @media screen and (max-width: 1025px) {
+        ul {            
+            li {
+                min-height: 5rem;
+                height: 5rem;
+                margin: 2rem 0;                
+                border-radius: 0.3rem;
+                padding: 0 2rem;                
+                .list__check-field {
+                    width: 5%;
+                }
+                .list__text-field {
+                    width: 50%;                    
+                    margin-left: 1rem;
+                    font-size: 2rem;                    
+                }
+                .button-group {
+                    width: 5rem;                    
+                }
+                input {                   
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 599px) {
+        ul {            
+            li {
+                min-height: 5rem;
+                height: 5rem;
+                margin: 2rem 0;                
+                border-radius: 0.3rem;
+                padding: 0 2rem;                
+                .list__check-field {
+                    width: 5%;
+                }
+                .list__text-field {
+                    width: 50%;                    
+                    margin-left: 1rem;
+                    font-size: 2rem;                    
+                }
+                .button-group {
+                    width: 5rem;                    
+                }
+                input {                   
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 320px) {
+        ul {            
+            li {
+                min-height: 5rem;
+                height: 5rem;
+                margin: 2rem 0;                
+                border-radius: 0.3rem;
+                padding: 0 2rem;                
+                .list__check-field {
+                    width: 5%;
+                }
+                .list__text-field {
+                    width: 30%;                    
+                    margin-left: 1rem;
+                    font-size: 2rem;                    
+                }
+                .button-group {
+                    width: 5rem;                    
+                }
+                input {
+                    width: 100%;                                     
+                    font-size: 1rem;
+                }
             }
         }
     }

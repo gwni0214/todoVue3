@@ -76,4 +76,23 @@ export default {
             }
         }
     }
+    @media screen and (max-width: 320px) {
+        .todo-input {            
+            &__box {
+                display: flex;
+                justify-content: space-between;             
+                height: 3rem;
+                line-height: 3rem;
+                border-radius: 0.3rem;
+                input {
+                    width: 100%;
+                    font-size: 1.5rem;                    
+                }
+                &__add {
+                    width: 3rem;
+                    border-radius: 0 0.3rem 0.3rem 0;
+                }
+            }
+        }
+    }
 </style>
