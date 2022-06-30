@@ -28,15 +28,15 @@ export default {
     methods: {
         addTodo(){
             if(this.newTodoItem !== ""){
-                console.log(this.newTodoItem);
-                let todoItem = [
+                // console.log(this.newTodoItem);
+                let todoItem = 
                     {
                         id: this.newTodoItem,
                         date: new Date,
                         option1 : false,
-                        option2: false
+                        isChecked: false
                     }
-                ];
+                ;
                 this.$emit('addTodo', todoItem);
                 this.newTodoItem = "";
             } else {

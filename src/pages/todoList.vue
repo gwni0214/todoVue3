@@ -5,13 +5,17 @@
                 <!-- 체크 -->
                 <span class="list__check-field">
                     <i class="icon-checkmark"
-                    v-show="showCheck && checked === index"
+                    v-show="todoItem.isChecked"
                     ></i>
                 </span>
-                <div class="list__text-field" @click="checkShow(index)"
+                    
+                    <!-- <input type="checkbox" id="check-box"> -->
+                
+                <div class="list__text-field"
+                @click="checkShow(index)"
                 v-show="!toFix || checked !== index"
                 >
-                    {{ todoItem }}
+                    {{ todoItem.id }}
                 </div>
                 <!-- 수정하기 인풋 -->
                 <input type="text" placeholder="수정할 내용을 입력하세요!" v-model="newTodoItem"
@@ -47,10 +51,10 @@ export default {
         propsdata: Array,
         showCheck: Boolean,
         checked: Number,
-        toFix: Boolean
+        toFix: Boolean,
+        
     },
-    created(){
-        console.log(this.propsdata);
+    created(){                
     },
     data(){
         return {
@@ -61,6 +65,7 @@ export default {
     components: {
         'ModalPop' : ModalPop
     },
+ 
     methods: {
         checkedItem(index){
             this.modal = true;
@@ -74,24 +79,24 @@ export default {
         },
         close(){
             this.modal = false;
-        },
-        checkShow(index){
-            this.$emit('checkShow', index);
-        },
+        },        
         changeItem(index){
             if(this.newTodoItem !== ""){
-                let value = [
+                let value = 
                     {
                         id: this.newTodoItem,
                         date: new Date,
                         option1: false,
-                        option2: false
+                        isChecked: false
                     }
-                ];
+                ;
                 this.$emit('changeItem', value, index);
                 this.newTodoItem = "";
             }
             this.$emit('toFixItem', index)
+        },
+        checkShow(index){
+            this.$emit('checkShow',index)
         }
     }
 }
