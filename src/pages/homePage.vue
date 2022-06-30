@@ -41,14 +41,9 @@ export default {
                 }
             }
         }
-        // console.log(JSON.parse(JSON.stringify(this.todoItems)));       
-        // this.todoItems.sort();                
-                        
+        // console.log(JSON.parse(JSON.stringify(this.todoItems)));                                                      
     },
-    updated(){
-        
-        // console.log(Array.from(JSON.parse(JSON.stringify(this.todoItems))));
-        // console.log("upDated");
+    updated(){                
     },
 
     components: {
@@ -85,9 +80,7 @@ export default {
 
             //3. 새로 수정된 값을 로컬스토리지와 todoItems에 추가. (addTodo와 동일)
             localStorage.setItem(JSON.stringify(todoItem),JSON.stringify(todoItem));
-            this.todoItems.push(todoItem);
-                   
-                   
+            this.todoItems.push(todoItem);                                      
         },
         // localStorage의 value -> checked: flase -> checked: true
         //체크하기
@@ -107,10 +100,7 @@ export default {
             }            
             // console.log(newIndex[0]);
             this.todoItems.splice(index,1,newIndex[0]);
-            // console.log(JSON.parse(JSON.stringify(this.todoItems)));
-            
-            
-                          
+            // console.log(JSON.parse(JSON.stringify(this.todoItems)));                                                  
         }      
     }    
 }

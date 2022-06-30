@@ -7,10 +7,7 @@
                     <i class="icon-checkmark"
                     v-show="todoItem.isChecked"
                     ></i>
-                </span>
-                    
-                    <!-- <input type="checkbox" id="check-box"> -->
-                
+                </span>                                                        
                 <div class="list__text-field"
                 @click="checkShow(index)"
                 v-show="!toFix || checked !== index"
@@ -48,11 +45,9 @@
 import ModalPop from '../components/ModalPop.vue';
 export default {
     props: {
-        propsdata: Array,
-        showCheck: Boolean,
+        propsdata: Array,        
         checked: Number,
-        toFix: Boolean,
-        
+        toFix: Boolean,        
     },
     created(){                
     },
@@ -72,8 +67,7 @@ export default {
             // console.log(index);            
             this.$emit('checkedItem', index);           
         },
-        modalConfirm(todoItem, index){
-            console.log(todoItem, index);
+        modalConfirm(todoItem, index){            
             this.$emit('modalConfirm', todoItem, index);
             this.modal = false;
         },
