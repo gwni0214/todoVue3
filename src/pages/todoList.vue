@@ -1,5 +1,6 @@
 <template>
-    <div class="list-wrap">        
+    <div class="list-wrap">
+        <draggable v-model="myArray">      
         <transition-group name="list" tag="ul">
             <li v-for="(todoItem, index) in propsdata" :key="index">
                 <!-- 체크 -->
@@ -37,12 +38,14 @@
                 @close="close"
                 ></ModalPop>
             </li>
-        </transition-group>       
+        </transition-group> 
+        </draggable>       
     </div>
 </template>
 
 <script>
 import ModalPop from '../components/ModalPop.vue';
+import draggable from 'vuedraggable'
 export default {
     props: {
         propsdata: Array,        
@@ -58,7 +61,8 @@ export default {
         }
     },
     components: {
-        'ModalPop' : ModalPop
+        'ModalPop' : ModalPop,
+        draggable
     },
  
     methods: {
