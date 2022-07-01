@@ -1,6 +1,6 @@
 <template>
     <div class="list-wrap">
-        <draggable v-model="myArray">      
+        <draggable>      
         <transition-group name="list" tag="ul">
             <li v-for="(todoItem, index) in propsdata" :key="index">
                 <!-- 체크 -->
