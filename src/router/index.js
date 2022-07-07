@@ -9,7 +9,7 @@ Vue.use(VueRouter);
 
 const routes = [
     {
-        path: "/vueTodoPage",
+        path: "/todoVue3",
         name: "home",
         component: homePage
     },

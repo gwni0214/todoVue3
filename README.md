@@ -1,5 +1,5 @@
 # 페이지 가기
-## https://gwni0214.github.io/vueTodoPage/
+## https://gwni0214.github.io/todoVue3/
 
 # Vue Todo List 만들기  
 

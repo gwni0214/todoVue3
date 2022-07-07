@@ -1,6 +1,6 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
   transpileDependencies: true,
-  publicPath: '/vueTodoPage',
+  publicPath: '/todoVue3',
   outputDir: 'docs'   
 })
