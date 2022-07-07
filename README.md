@@ -1,6 +1,4 @@
-# Vue Todo List 만들기
-
-    https://gwni0214.github.io/todoVue3/
+# Vue Todo List 만들기  
 
     구현해야 할 기능
     1. todo 입력
