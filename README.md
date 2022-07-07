@@ -16,7 +16,7 @@
     4. 리스트 체크하기 기능
 
 # V 1.4.0
-    vueTodoPage 배포
+    todoVue3 github Pages 배포.
 
 # V 1.3.0
     vuedraggable을 사용한 리스트 드래그 기능 추가.
