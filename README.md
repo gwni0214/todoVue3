@@ -1,5 +1,8 @@
 # Notice
-## 해당 Todo는 2주차까지의 작업이고 본 저장소는 7월1일(금) 부로 기능 업데이트 중단.<br>각종 버그 해결, 부족한 기능 구현은 <a herf="https://github.com/gwni0214/vuexTodo">vuexTodo 저장소</a>에 새로 만들어서 저장했습니다. 
+## 해당 Todo는 2주차까지의 작업이고 본 저장소는 7월1일(금) 부로 기능 업데이트 중단.
+#### 각종 버그 해결, 부족한 기능 구현은 
+### [vuexTodo 저장소](https://github.com/gwni0214/vuexTodo)
+#### 에 새로 만들어서 저장했습니다. 
 
 # 페이지 가기
 ## https://gwni0214.github.io/todoVue3/
